@@ -1,5 +1,71 @@
 q. What happens when you initialize a repository? Why do you need to do it?
 
-a. a .git folder is created, this is where the metadata is 
+a. A .git folder is created, this is where the metadata is 
 stored by git so it can keep tracking files. If you dont create 
 this then git will not be tracking the repository.
+
+q. How is the staging area different from the working directory 
+and the repository? What value do you think it offers?
+
+a. The staging area is used so that certain files in a 
+repository can be tracked and commited. Commit only takes a 
+snapshot of files in the staging area. This gives more control 
+over which files are commited each time, allowing the user to 
+choose the most logical course of action.
+
+q. How can you use the staging area to make sure you have one 
+commit per logical change?
+
+a. You only need add the file(s) with the changes you want to 
+commit to the staging area, alloewing you to determine which 
+changed files corresponf to the one logical change.
+
+q. What are some situations when branches would be helpful in 
+keeping your history organized? How would branches help?
+
+a. when experimenting with a new feature, or creating a new 
+version of a programme it can be beneficial to swtich to a 
+new branch rather than working with the master branch. This 
+means that it is easy enough to keep the working version safely 
+as the master, and experiment in a new branch with quite 
+large-scale changes.
+
+Mike Wales: New branch of work. Keep things organised. The 
+master one has production quality. Development branch for active 
+work. Experimental branch or unique feature work - fully 
+expected to break. Also gives ability to switch and leave a 
+branch.
+
+a. cont. Also helpful for collaborative work, each person 
+working on the code would make their own branch.
+
+q. How do the diagrams help you visualize the branch structure?
+
+a. While git log can be used to show the history of all
+specified branches using this command:
+(git log --graph --oneline <branch> <branch <branch>)
+It is helpful to have a diagram for yourself to visualise 
+exactly where each branch has come off from the master.
+Good way to keep on top of the history of your work. Worst case 
+scenario of not doing this is if detached HEAD changes are 
+commited and then changes are lost (as these will not show up on 
+git log without existing in a branch)
+
+q. What is the resul of merging two branches together?
+Why do we represent it in the diagram the way we do?
+
+a. The result is that the changes made in each of the branches 
+are combined in one commit, bringing experimental or extra 
+developments back into the master branch (in most cases). It has 
+two parents and so has arrows pointing back to two branches,but 
+in fact has brought the separate branches into one branch (
+usually master).
+
+q. What are the pros and cons of Git’s automatic merging vs. 
+always doing merges manually?
+
+a. The automatic merging is quick and simple, however if 
+git guessed when conflicts arose, you may end up losing features 
+you did not want to.
+Manual merging allows you to choose what makes the cut for 
+the commit, so no surprises!
