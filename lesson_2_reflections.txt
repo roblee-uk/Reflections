@@ -1,0 +1,5 @@
+q. What happens when you initialize a repository? Why do you need to do it?
+
+a. a .git folder is created, this is where the metadata is 
+stored by git so it can keep tracking files. If you dont create 
+this then git will not be tracking the repository.
