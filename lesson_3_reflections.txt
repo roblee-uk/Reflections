@@ -6,3 +6,11 @@ different networks.
 2. When working on 2 different PCs (eg. home
 and work).
 3. When sharing with public.
+
+Why might you want to always pull changes manually rather than 
+having Git automatically stay up-to-date with your remote 
+repository?
+
+This allows you to keep the local repository in the state
+you want to. May be in the middle of developing a feature when 
+someone else updates.
